@@ -50,3 +50,23 @@ window.ontouchend = (e) => handleOnUp(e.touches[0]);
 window.onmousemove = (e) => handleOnMove(e);
 
 window.ontouchmove = (e) => handleOnMove(e.touches[0]);
+
+/*  */
+document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll(".image");
+  const imageModal = document.getElementById("image-modal");
+  const modalImage = document.getElementById("modal-image");
+
+  images.forEach((image, index) => {
+    image.addEventListener("click", function () {
+      // Set the modal content to the clicked image
+      modalImage.src = this.src;
+      imageModal.style.display = "flex";
+    });
+  });
+
+  // Function to close the modal
+  window.closeModal = function () {
+    imageModal.style.display = "none";
+  };
+});
