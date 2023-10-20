@@ -51,7 +51,7 @@ window.onmousemove = (e) => handleOnMove(e);
 
 window.ontouchmove = (e) => handleOnMove(e.touches[0]);
 
-/*  */
+/* ===================================================================== */
 document.addEventListener("DOMContentLoaded", function () {
   const images = document.querySelectorAll(".image");
   const imageModal = document.getElementById("image-modal");
